@@ -1,0 +1,21 @@
+{
+  "name": "usage-timer",
+  "version": "1.0.0",
+  "description": "Claude Code 이용 시간이 일정 간격 지날 때마다 화면 맨 위에 경과 문구를 흘려 보여주는 Windows 용 알림 훅",
+  "author": {
+    "name": "Lamool"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "HOOK_ROOT=$(printf %s \"${CLAUDE_PLUGIN_ROOT}\" | sed 's|^/\\([a-zA-Z]\\)/|\\1:/|'); powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File \"$HOOK_ROOT/timer-notify.ps1\" -Mode start -Minutes 60"
+          }
+        ]
+      }
+    ]
+  }
+}

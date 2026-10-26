@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "claude-usage-timer-hook",
+  "description": "Claude Code 이용 시간 경과 알림 훅",
+  "owner": {
+    "name": "Lamool"
+  },
+  "plugins": [
+    {
+      "name": "usage-timer",
+      "description": "일정 간격마다 화면 맨 위에 '실행 후 N분 경과' 문구를 흘려 보여주는 Windows 용 알림 훅",
+      "version": "1.0.0",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

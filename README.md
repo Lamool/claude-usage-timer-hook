@@ -13,9 +13,23 @@ Claude Code 를 쓰는 동안 일정 간격마다 화면 맨 위에 "Claude 실�
 
 ## 설치
 
+### 플러그인으로 설치 (권장)
+
+Claude Code 안에서 입력해요.
+
+```
+/plugin install usage-timer --marketplace Lamool/claude-usage-timer-hook
+```
+
+설치한 뒤 Claude Code 를 새로 시작하면 적용돼요. 간격은 60분으로 고정이에요. 바꾸려면 아래 수동 설치를 쓰세요.
+
+### 수동 설치
+
 1. `timer-notify.ps1` 을 `C:\Users\<사용자이름>\.claude\hooks\` 에 복사해요.
 2. `settings.example.json` 의 `hooks` 부분을 `~/.claude/settings.json` 에 합쳐요. 경로의 `<사용자이름>` 은 본인 계정으로 바꿔요.
 3. Claude Code 를 새로 시작해요.
+
+플러그인과 수동 설치를 같이 켜도 타이머는 하나만 돌지만, 훅이 두 번 실행되니 한쪽만 쓰는 게 좋아요.
 
 ## 설정
 
