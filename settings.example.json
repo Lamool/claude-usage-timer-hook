@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File \"C:/Users/<사용자이름>/.claude/hooks/timer-notify.ps1\" -Mode start -Minutes 60"
+          }
+        ]
+      }
+    ]
+  }
+}
