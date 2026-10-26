@@ -18,7 +18,8 @@ Claude Code 를 쓰는 동안 일정 간격마다 화면 맨 위에 "Claude 실�
 Claude Code 안에서 입력해요.
 
 ```
-/plugin install usage-timer --marketplace Lamool/claude-usage-timer-hook
+/plugin marketplace add Lamool/claude-usage-timer-hook
+/plugin install usage-timer@claude-usage-timer-hook
 ```
 
 설치한 뒤 Claude Code 를 새로 시작하면 적용돼요. 간격은 60분으로 고정이에요. 바꾸려면 아래 수동 설치를 쓰세요.
